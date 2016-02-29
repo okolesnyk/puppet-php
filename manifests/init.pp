@@ -121,6 +121,7 @@ class php (
       class { '::php::fpm':
         service_enable => $fpm_service_enable,
         service_ensure => $fpm_service_ensure,
+        service_name   => $fpm_service_name,
         settings       => $real_settings,
       } ->
     Anchor['php::end']
